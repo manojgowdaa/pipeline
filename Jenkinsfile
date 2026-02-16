@@ -7,6 +7,7 @@ pipeline {
       }
     }
     stage ('Test Parallel') {
+        if $branchname==feature/
       parallel {
         stage ('Test on CHROME') {
           steps {
